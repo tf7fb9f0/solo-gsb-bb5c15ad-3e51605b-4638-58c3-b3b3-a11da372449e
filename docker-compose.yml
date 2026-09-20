@@ -1,0 +1,8 @@
+services:
+  uncertainty-api:
+    build: .
+    ports:
+      - "${HOST_PORT:-8000}:8000"
+    environment:
+      PORT: "8000"
+    restart: unless-stopped
